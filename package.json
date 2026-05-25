@@ -1,0 +1,52 @@
+{
+  "name": "@mongez/atomic-query",
+  "version": "6.0.0",
+  "description": "Client-side query cache built on @mongez/react-atom. A React-Query-style API for the mongez atom ecosystem.",
+  "main": "src/index.ts",
+  "author": "hassanzohdy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hassanzohdy/mongez-atomic-query"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "exports": {
+    ".": {
+      "react-server": null,
+      "default": "./src/index.ts"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@mongez/events": "^2.1.0",
+    "@mongez/react-atom": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "happy-dom": "^15.7.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": [
+    "react",
+    "atom",
+    "query",
+    "cache",
+    "react-query",
+    "state",
+    "client-side",
+    "mongez"
+  ]
+}
