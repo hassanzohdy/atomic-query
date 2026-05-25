@@ -1,12 +1,12 @@
 {
   "name": "@mongez/atomic-query",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Client-side query cache built on @mongez/react-atom. A React-Query-style API for the mongez atom ecosystem.",
   "main": "src/index.ts",
   "author": "hassanzohdy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hassanzohdy/mongez-atomic-query"
+    "url": "https://github.com/hassanzohdy/atomic-query"
   },
   "license": "MIT",
   "scripts": {
