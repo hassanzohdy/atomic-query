@@ -7,18 +7,26 @@ The package is **client-only** — every file carries `"use client"` and the exp
 ## Docs
 
 - [Overview](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/overview.md): Pitch, install, mental model, what this does and what it deliberately doesn't.
+  - *Auto-trigger:* User asks what `@mongez/atomic-query` is, whether to adopt it, or how it differs from TanStack Query and fits with `@mongez/atom`.
 - [README](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/README.md): Full usage guide with framework integration examples.
 - [Changelog](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/CHANGELOG.md): Release notes.
 
 ## Reference
 
 - [Queries](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/queries.md): `useQuery`, `Query<T>` shape, key matching, retries, refetch triggers.
+  - *Auto-trigger:* Code imports `useQuery`/`queryAtom` or user asks how `useQuery`, `staleTime`/`gcTime`, retries, refetch-on-focus, or query-key hashing work.
 - [Mutations](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/mutations.md): `useMutation`, onMutate/onSuccess/onError/onSettled, abort behavior.
+  - *Auto-trigger:* Code imports `useMutation`/`updateQueryData`, or user asks how to POST/PUT/DELETE, optimistically update, or roll back on error.
 - [Infinite queries](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/infinite.md): `useInfiniteQuery`, `fetchNextPage`, `hasNextPage`, cursor-based + offset-based patterns.
+  - *Auto-trigger:* Code imports `useInfiniteQuery` or user asks about infinite scroll, load more, `getNextPageParam`, or cursor/offset pagination.
 - [Suspense mode](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/suspense.md): `useSuspenseQuery`, render-time cache init, ErrorBoundary pairing.
+  - *Auto-trigger:* Code imports `useSuspenseQuery` or user asks about React Suspense, non-undefined `data` typing, or ErrorBoundary pairing.
 - [Cache management](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/cache.md): `invalidate` (segment-aware), `refetchQuery`, `updateQueryData`, `destroyQuery`, `getCacheStats`, GC.
+  - *Auto-trigger:* Code imports `invalidate`/`refetchQuery`/`updateQueryData`/`destroyQuery`/GC helpers, or user asks how to read/write/expire the cache outside a hook.
 - [List helpers](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/list-helpers.md): `push`, `unshift`, `pop`, `shift`, `replace`, `remove`, `removeByIndex`, `clear`, `sort`, `reverse`.
+  - *Auto-trigger:* Code imports `push`/`unshift`/`remove`/`sort`/etc., or user asks how to append/prepend/remove/reorder a cached list without refetching.
 - [SSR integration](https://raw.githubusercontent.com/hassanzohdy/mongez-atomic-query/main/skills/ssr.md): `<HydrateQueries>`, `seedQuery`, Next.js / Remix / TanStack Start patterns.
+  - *Auto-trigger:* Code imports `HydrateQueries`/`seedQuery`, or user asks about SSR seeding, Next.js server components, Remix/TanStack loaders, or hover prefetch.
 
 ## Quick rules
 

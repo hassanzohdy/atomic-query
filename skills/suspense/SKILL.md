@@ -1,7 +1,9 @@
 ---
 name: mongez-atomic-query-suspense
-description: How to use useSuspenseQuery from @mongez/atomic-query to suspend a React subtree while a query loads, including ErrorBoundary pairing and behavioral gotchas.
-when_to_use: Use when someone calls useSuspenseQuery, asks about React Suspense integration with atomic-query, wants data typed as non-undefined without a loading guard, or asks about pairing Suspense with ErrorBoundary.
+description: |
+  How to use useSuspenseQuery from @mongez/atomic-query to suspend a React subtree while a query loads, including ErrorBoundary pairing and behavioral gotchas.
+  TRIGGER when: code imports `useSuspenseQuery` from `@mongez/atomic-query`, or uses it together with `<Suspense>` and `ErrorBoundary`; user asks "how do I use React Suspense with atomic-query / get data typed as non-undefined / pair Suspense with ErrorBoundary"; typical import `import { useSuspenseQuery } from "@mongez/atomic-query"`.
+  SKIP: plain non-suspense `useQuery` usage — use `mongez-atomic-query-basic-query` or `mongez-atomic-query-queries`; SSR streaming / server-component-driven loading — use `mongez-atomic-query-ssr`; write-side mutations — use `mongez-atomic-query-mutations`; cache invalidation triggered while suspended — use `mongez-atomic-query-invalidation`.
 ---
 
 # Suspense-mode queries

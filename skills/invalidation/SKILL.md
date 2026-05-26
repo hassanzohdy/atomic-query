@@ -1,7 +1,9 @@
 ---
 name: mongez-atomic-query-invalidation
-description: How to invalidate cached queries (prefix and exact match), refetch on demand, seed from a server loader, and manage cache lifecycle (GC, destroy, stats).
-when_to_use: Use when someone needs to force a refetch after a mutation, invalidate a group of related queries, seed the client cache from a server loader, or manage cache size and garbage collection.
+description: |
+  How to invalidate cached queries (prefix and exact match), refetch on demand, seed from a server loader, and manage cache lifecycle (GC, destroy, stats).
+  TRIGGER when: code imports `invalidate`, `invalidateAll`, `invalidateBackground`, `invalidateBackgroundAll`, `refetchQuery`, `refetchMultipleQueries`, `refetchQueryBackground`, `refetchMultipleQueriesBackground`, `seedQuery`, `HydrateQueries`, `destroyQuery`, `clearCache`, `garbageCollect`, `limitCacheSize`, `getCacheStats`, `setupAutoGC`, `getQuery`, `getData`, or `isStale` from `@mongez/atomic-query`; user asks "how do I force a refetch after a mutation / invalidate a group of queries / seed cache from loader / configure GC"; typical import `import { queryAtom, invalidate } from "@mongez/atomic-query"`.
+  SKIP: pure cache-API reference (no invalidation framing) — use `mongez-atomic-query-cache`; defining the `useQuery` hook itself — use `mongez-atomic-query-basic-query` or `mongez-atomic-query-queries`; SSR boundary integration with framework loaders — use `mongez-atomic-query-ssr`; array helpers `push`/`remove`/`sort` — use `mongez-atomic-query-list-helpers`.
 ---
 
 # Cache invalidation and refetch patterns

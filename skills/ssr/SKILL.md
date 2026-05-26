@@ -1,7 +1,9 @@
 ---
 name: mongez-atomic-query-ssr
-description: How to seed the @mongez/atomic-query client cache from server-side data using HydrateQueries, with examples for Next.js App Router, Remix, and TanStack Start.
-when_to_use: Use when someone uses HydrateQueries, seeds the cache from a server loader, integrates with Next.js server components, Remix loader, or TanStack Start loader, or asks about SSR/prefetching patterns with @mongez/atomic-query.
+description: |
+  How to seed the @mongez/atomic-query client cache from server-side data using HydrateQueries, with examples for Next.js App Router, Remix, and TanStack Start.
+  TRIGGER when: code imports `HydrateQueries`, `seedQuery`, `SeedEntry`, or `HydrateQueriesProps` from `@mongez/atomic-query`; user asks "how do I SSR with atomic-query / seed cache from Next.js server component / hydrate from a Remix loader / prefetch on hover"; typical import `import { HydrateQueries } from "@mongez/atomic-query"`.
+  SKIP: pure client-side `useQuery` usage — use `mongez-atomic-query-basic-query` or `mongez-atomic-query-queries`; cache invalidation/refetch after first paint — use `mongez-atomic-query-invalidation`; suspense rendering boundaries — use `mongez-atomic-query-suspense`; non-SSR cache-API questions — use `mongez-atomic-query-cache`.
 ---
 
 # SSR integration

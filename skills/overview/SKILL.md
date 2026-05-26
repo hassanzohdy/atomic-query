@@ -1,7 +1,9 @@
 ---
 name: mongez-atomic-query-overview
-description: What @mongez/atomic-query is, how it relates to @mongez/react-atom, and when to reach for it instead of TanStack Query.
-when_to_use: Use when someone asks what atomic-query is, whether to adopt it, how it differs from TanStack Query, or how it fits into the @mongez/atom ecosystem.
+description: |
+  What @mongez/atomic-query is, how it relates to @mongez/react-atom, and when to reach for it instead of TanStack Query.
+  TRIGGER when: code imports `queryAtom` or `HydrateQueries` from `@mongez/atomic-query` for the first time in a project; user asks "what is @mongez/atomic-query / should I use it / how is it different from TanStack Query / how does it fit with @mongez/atom / why is it client-only"; typical import `import { queryAtom } from "@mongez/atomic-query"`.
+  SKIP: concrete hook usage (`useQuery`, `useMutation`, `useInfiniteQuery`, `useSuspenseQuery`) — use the matching task-specific skill; cache management — use `mongez-atomic-query-cache` or `mongez-atomic-query-invalidation`; SSR seeding mechanics — use `mongez-atomic-query-ssr`; list/array helpers — use `mongez-atomic-query-list-helpers`.
 ---
 
 # @mongez/atomic-query — Overview

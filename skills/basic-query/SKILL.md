@@ -1,7 +1,9 @@
 ---
 name: mongez-atomic-query-basic-query
-description: How to use queryAtom.useQuery — options, return shape, granular field hooks, suspense mode, and cache key serialisation rules.
-when_to_use: Use when someone is writing or debugging a useQuery call, choosing between useQuery and useSuspenseQuery, configuring staleTime/gcTime/retry options, or working with granular re-render hooks (useLoadChange, useDataChange, useErrorChange, useQueryChange).
+description: |
+  How to use queryAtom.useQuery — options, return shape, granular field hooks, suspense mode, and cache key serialisation rules.
+  TRIGGER when: code imports `queryAtom`, `useQuery`, `useSuspenseQuery`, `useLoadChange`, `useErrorChange`, `useDataChange`, `useQueryChange`, `onQueryChange`, `getData`, `getQuery`, or `invalidate` from `@mongez/atomic-query`; user asks "how do I fetch data / write a useQuery / configure staleTime / avoid unnecessary re-renders / subscribe to one field"; typical import `import { queryAtom } from "@mongez/atomic-query"`.
+  SKIP: write-side operations (POST/PUT/DELETE) — use `mongez-atomic-query-mutations`; cache invalidation and refetch patterns — use `mongez-atomic-query-invalidation` or `mongez-atomic-query-cache`; cursor/page-based pagination — use `mongez-atomic-query-infinite`; server-side seeding via `<HydrateQueries>` — use `mongez-atomic-query-ssr`; suspense-only `useSuspenseQuery` deep-dives — use `mongez-atomic-query-suspense`.
 ---
 
 # Basic queries with useQuery
