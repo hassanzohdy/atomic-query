@@ -1,6 +1,6 @@
 {
   "name": "@mongez/atomic-query",
-  "version": "6.0.5",
+  "version": "6.0.6",
   "description": "Client-side query cache built on @mongez/react-atom. A React-Query-style API for the mongez atom ecosystem.",
   "main": "src/index.ts",
   "author": "hassanzohdy",
