@@ -40,7 +40,7 @@ It is **not a replacement for your framework's data loader**. The intended split
 | Use atomic-query | Use TanStack Query |
 |---|---|
 | You are already using `@mongez/atom` throughout the app | You are not on `@mongez/atom` |
-| You want built-in list helpers (`push`, `unshift`, `remove`, …) | You need infinite scroll with `getNextPageParam` today (atomic-query has `useInfiniteQuery` but it is newer) |
+| You want built-in list helpers (`push`, `unshift`, `remove`, …) | You need bidirectional infinite scroll (atomic-query's `useInfiniteQuery` is forward-only — no `getPreviousPageParam`) |
 | You want a smaller surface area and are comfortable owning SSR through your framework loader | You need the full TanStack Query feature set (Suspense, dehydrate/hydrate, devtools, normalisation) |
 
 ### Client-only constraint
@@ -88,7 +88,6 @@ The seeded data lands in the cache synchronously during render — no flash, no 
 
 ## Key details / Pitfalls
 
-- **Not yet published to npm.** The README documents the intended API; check CHANGELOG.md for current dev state.
 - **Peer deps**: `@mongez/atom`, `@mongez/react-atom`, React >= 18.
 - `HydrateQueries` is the React wrapper around `queryAtom.seedQuery()`. Either approach seeds the cache synchronously.
 - Do not try to use atomic-query in a Next.js App Router server component — the bundler will refuse to compile it.
