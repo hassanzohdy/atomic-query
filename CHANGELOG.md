@@ -1,5 +1,10 @@
 # Changelog — @mongez/atomic-query
 
+## [6.0.12] — 2026-09-25
+
+### Changed
+- Added a grouped Agent Kit skills index for topic-based discovery.
+
 ## 0.1.0 — Unreleased (initial publish candidate)
 
 This package was previously prototyped against a personal project and never released. The 0.1.0 release candidate is a near-rewrite that fixes correctness bugs in the prototype, marks the package client-only, and ships the test suite that wasn't there before.

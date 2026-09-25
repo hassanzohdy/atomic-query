@@ -1,7 +1,7 @@
 ---
 name: mongez-atomic-query-list-helpers
 description: |
-  Array mutation helpers on queryAtom (push, unshift, pop, shift, replace, remove, removeByIndex, clear, sort, reverse) that update a cached array value in-place without triggering a refetch.
+  Array mutation helpers on queryAtom (push, unshift, pop, shift, replace, remove, removeByIndex, clear, sort, reverse) that immutably update a cached array value without triggering a refetch.
 ---
 
 # List helpers
