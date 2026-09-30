@@ -1,5 +1,14 @@
 # Changelog — @mongez/atomic-query
 
+## [7.0.0] — 2026-09-30
+
+Aligned with the atom family 7.0.0; requires react-atom 7. No API of `@mongez/atomic-query` changed.
+
+### Changed
+
+- **`@mongez/react-atom` dependency moved from `^6.0.0` to `^7.0.0`.** `@mongez/react-atom` 7 makes server renders throw without an `<AtomStoreProvider>` and defers persisted-atom hydration to after mount (see the react-atom 7.0.0 changelog). Query state is not persisted, so the deferred hydration does not touch `useQuery`; wrap server renders in an `<AtomStoreProvider>` as react-atom 7 requires.
+- Ships `MIGRATION.md` in the published package.
+
 ## [6.0.12] — 2026-09-25
 
 ### Changed

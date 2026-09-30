@@ -1,5 +1,14 @@
 # Migration — @mongez/atomic-query
 
+## 6.x → 7.0
+
+`@mongez/atomic-query` 7.0 is released in lockstep with the atom family and changes nothing in its own API. The only change is the dependency: `@mongez/react-atom` moves from `^6.0.0` to `^7.0.0`, so a normal upgrade pulls in `@mongez/atom` 7 as well. If you also import `@mongez/react-atom` or `@mongez/atom` directly, upgrade them together to 7.x.
+
+What to check, all inherited from react-atom 7 (see its `MIGRATION.md`):
+
+1. **Server renders need a provider.** Wrap the tree in `<AtomStoreProvider>`, otherwise the hooks throw on the server.
+2. **`persistHydration` defaults to `"deferred"`** for persisted atoms you create yourself. Query state is not persisted by `atomic-query`, so queries are unaffected.
+
 ## First release (0.1.0)
 
 This is the **initial published version** of `@mongez/atomic-query`. The library was previously prototyped against a personal project but never released to npm, so there's no prior public version to migrate from.
