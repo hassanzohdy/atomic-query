@@ -1,5 +1,11 @@
 # Changelog — @mongez/atomic-query
 
+## [7.0.1] — 2026-11-16
+
+### Changed
+
+- Released with `@mongez/atom` 7.0.1 (same family version): the atom registry is a null-prototype object. No changes in this package.
+
 ## [7.0.0] — 2026-09-30
 
 Aligned with the atom family 7.0.0; requires react-atom 7. No API of `@mongez/atomic-query` changed.
